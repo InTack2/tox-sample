@@ -19,3 +19,19 @@ class TestDoubleTotalizer(object):
     def test_sam(self):
         result = DoubleTotalizer().sam(1, 2)
         assert result == 6
+
+
+def test_maya():
+    try:
+        import maya.cmds as cmds
+        import maya.standalone
+        maya.standalone.initialize("python")
+        info = cmds.about(installedVersion=True)
+        # info = cmds.about(version=True)
+        version = info.split(" ")
+        print(version)
+        maya.standalone.uninitialize()
+    except:
+        pass
+    else:
+        assert True

@@ -1,13 +1,22 @@
 # !/usr/bin/env python
+from setuptools import setup
+from setuptools import find_packages
 
-from distutils.core import setup
+install_requires = [
+    "requests",
+]
 
 
-setup(name='sample',
+def _requires_from_file(filename):
+    return open(filename).read().splitlines()
+
+
+setup(name='tox_sample',
       version='0.1',
-      description='sample',
-      author='sample',
+      description='tox_sample',
+      author='tox_sample',
       author_email='sample@sample.sample',
       url='',
-      packages=['src'],
+      packages=find_packages("src.tox_sample"),
+      install_requires=install_requires
       )

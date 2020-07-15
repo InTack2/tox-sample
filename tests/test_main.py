@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 from __future__ import absolute_import
 from __future__ import generators
 from __future__ import division
-from src.main import Totalizer, DoubleTotalizer
+from tox_sample.main import Totalizer, DoubleTotalizer
 
 
 class TestTotalizer(object):
